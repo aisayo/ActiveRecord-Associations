@@ -1,0 +1,54 @@
+pet has many appointments
+pet has many vets through appointments
+
+
+appointments(join table)
+belongs to pet 
+belongs to vet
+
+
+vet has many appointments
+vet has many pets through appointments
+
+.pets 
+
+
+pet = Pet.create(name: "mushy") 
+vet = Vet.create(name: "Aysan")
+appt = Appointment.create(date: DateTime.now)
+owner = Owner.create(name: "Christian")
+
+
+
+types of relationships: 
+
+has many 
+belongs to 
+has many through 
+
+macros: methods that open a library of methods available 
+
+
+has many (plural)
+- parent 
+- array 
+- has many will return []
+
+
+belongs to (singular)
+- child 
+- foriegn key (parent_id)
+
+has many through 
+    - association that associates two completely separate classes through 
+    - one shared class 
+    - has_many :relationship, through: :join_table
+
+
+foreign keys set when we are dealing with a child object (belongs_to)
+
+
+owner class 
+
+owner can have many pets
+pets belongs to the owner 
